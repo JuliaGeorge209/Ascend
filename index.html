@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ascend Agency — Branding &amp; Growth</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            neon: '#39FF14',
+            dark: '#0a0a0a',
+            card: '#111111',
+            border: '#1e1e1e',
+          },
+          fontFamily: {
+            heading: ['Syne', 'sans-serif'],
+            body: ['DM Sans', 'sans-serif'],
+          },
+          boxShadow: {
+            neon: '0 0 24px #39FF1466',
+            'neon-lg': '0 0 48px #39FF1440',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+<nav class="glass-nav fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-neon rounded-sm flex items-center justify-center">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="#0a0a0a">
+          <path d="M2 14 L8 2 L14 14 L10 14 L8 8 L6 14 Z"/>
+        </svg>
+      </div>
+      <span class="font-heading font-bold text-white text-lg tracking-wide">Ascend<span class="text-neon">.</span></span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#about" class="nav-link text-sm font-body">About</a>
+      <a href="#pricing" class="nav-link text-sm font-body">Pricing</a>
+      <a href="#process" class="nav-link text-sm font-body">Process</a>
+      <a href="#blog" class="nav-link text-sm font-body">Blog</a>
+      <a href="#contact" class="nav-link text-sm font-body">Contact</a>
+    </div>
+
+    <!-- CTA + Hamburger -->
+    <div class="flex items-center gap-4">
+      <a href="#contact" class="btn-neon hidden md:inline-block px-5 py-2 rounded-sm text-sm">Get Started →</a>
+      <button id="hamburger" class="md:hidden text-white p-2" aria-label="Toggle menu">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="19" y2="6"/>
+          <line x1="3" y1="11" x2="19" y2="11"/>
+          <line x1="3" y1="16" x2="19" y2="16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden max-h-0 opacity-0 overflow-hidden" style="max-height:0;opacity:0">
+    <div class="px-6 pb-6 flex flex-col gap-4 border-t border-[#1e1e1e] pt-4">
+      <a href="#about" class="text-sm text-[#999] hover:text-white transition-colors">About</a>
+      <a href="#pricing" class="text-sm text-[#999] hover:text-white transition-colors">Pricing</a>
+      <a href="#process" class="text-sm text-[#999] hover:text-white transition-colors">Process</a>
+      <a href="#blog" class="text-sm text-[#999] hover:text-white transition-colors">Blog</a>
+      <a href="#contact" class="text-sm text-[#999] hover:text-white transition-colors">Contact</a>
+      <a href="#contact" class="btn-neon px-5 py-2 rounded-sm text-sm text-center mt-2">Get Started →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section class="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden" id="about">
+  <!-- Background grid -->
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(#39FF14 1px, transparent 1px), linear-gradient(90deg, #39FF14 1px, transparent 1px); background-size: 60px 60px;"></div>
+  <!-- Radial glow -->
+  <div class="absolute top-1/3 left-1/4 w-[600px] h-[600px] rounded-full" style="background: radial-gradient(circle, #39FF1410 0%, transparent 65%); pointer-events:none;"></div>
+
+  <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-16 items-center relative z-10">
+    <!-- Left -->
+    <div>
+      <div class="inline-flex items-center gap-2 border border-[#39FF1440] rounded-full px-4 py-1.5 mb-6 reveal">
+        <span class="w-2 h-2 rounded-full bg-neon animate-pulse"></span>
+        <span class="text-neon text-xs font-heading font-semibold tracking-widest uppercase">Performance-Driven Agency</span>
+      </div>
+
+      <h1 class="font-heading font-extrabold text-white leading-[1.05] mb-6 reveal" style="font-size: clamp(3rem, 6vw, 5.5rem); animation-delay:.1s;">
+        Branding <span class="text-gradient">&amp;</span><br>Growth
+      </h1>
+
+      <p class="text-[#888] text-lg leading-relaxed mb-10 max-w-md reveal" style="animation-delay:.2s;">
+        We build modern branding platforms to deploy powerful branding and growth services while building trust with potential clients. Our marketing work is designed to amplify your reach, drive conversion, and scale your business exponentially.
+      </p>
+
+      <div class="flex flex-wrap gap-4 reveal" style="animation-delay:.3s;">
+        <a href="#contact" class="btn-neon px-8 py-3.5 rounded-sm text-base inline-block">Start Scaling Now →</a>
+        <a href="#process" class="btn-outline px-8 py-3.5 rounded-sm text-base inline-block">How It Works</a>
+      </div>
+
+      <!-- Mini stats row -->
+      <div class="flex gap-8 mt-12 reveal" style="animation-delay:.4s;">
+        <div>
+          <p class="font-heading font-bold text-2xl text-white">10M+</p>
+          <p class="text-[#666] text-xs mt-0.5">Leads Generated</p>
+        </div>
+        <div class="w-px bg-[#1e1e1e]"></div>
+        <div>
+          <p class="font-heading font-bold text-2xl text-white">500+</p>
+          <p class="text-[#666] text-xs mt-0.5">Clients Served</p>
+        </div>
+        <div class="w-px bg-[#1e1e1e]"></div>
+        <div>
+          <p class="font-heading font-bold text-2xl text-neon">300%</p>
+          <p class="text-[#666] text-xs mt-0.5">Avg. ROI</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right — laptop mockup -->
+    <div class="reveal-right relative flex justify-center" style="animation-delay:.2s;">
+      <!-- Outer glow ring -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="w-[320px] h-[320px] rounded-full border border-[#39FF1415]"></div>
+        <div class="absolute w-[420px] h-[420px] rounded-full border border-[#39FF1408]"></div>
+      </div>
+      <!-- Laptop SVG mockup -->
+      <div class="laptop-glow relative z-10 w-full max-w-md">
+        <svg viewBox="0 0 500 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+          <!-- Laptop body -->
+          <rect x="60" y="30" width="380" height="240" rx="10" fill="#111" stroke="#2a2a2a" stroke-width="1.5"/>
+          <rect x="75" y="45" width="350" height="210" rx="4" fill="#0a0a0a"/>
+          <!-- Screen content -->
+          <rect x="85" y="55" width="330" height="30" rx="2" fill="#111"/>
+          <rect x="90" y="62" width="60" height="16" rx="2" fill="#1a1a1a"/>
+          <rect x="320" y="62" width="90" height="16" rx="8" fill="#39FF14"/>
+          <!-- Hero text block -->
+          <rect x="90" y="100" width="200" height="14" rx="2" fill="#2a2a2a"/>
+          <rect x="90" y="120" width="160" height="10" rx="2" fill="#1e1e1e"/>
+          <rect x="90" y="135" width="140" height="10" rx="2" fill="#1e1e1e"/>
+          <!-- Green button -->
+          <rect x="90" y="155" width="100" height="22" rx="4" fill="#39FF14"/>
+          <rect x="200" y="155" width="80" height="22" rx="4" fill="#111" stroke="#39FF14" stroke-width="1"/>
+          <!-- Stat boxes -->
+          <rect x="90" y="195" width="70" height="40" rx="4" fill="#111" stroke="#1e1e1e"/>
+          <rect x="170" y="195" width="70" height="40" rx="4" fill="#111" stroke="#39FF14" stroke-width="1"/>
+          <rect x="250" y="195" width="70" height="40" rx="4" fill="#111" stroke="#1e1e1e"/>
+          <rect x="330" y="195" width="70" height="40" rx="4" fill="#111" stroke="#1e1e1e"/>
+          <!-- Stat text-->
+          <rect x="98" y="203" width="36" height="8" rx="2" fill="#39FF14" opacity=".8"/>
+          <rect x="178" y="203" width="36" height="8" rx="2" fill="#39FF14"/>
+          <rect x="258" y="203" width="36" height="8" rx="2" fill="#39FF14" opacity=".8"/>
+          <rect x="338" y="203" width="36" height="8" rx="2" fill="#39FF14" opacity=".6"/>
+          <!-- Laptop base -->
+          <path d="M30 278 L470 278 L450 295 L50 295 Z" fill="#111" stroke="#2a2a2a" stroke-width="1"/>
+          <rect x="200" y="269" width="100" height="8" rx="4" fill="#1a1a1a"/>
+          <!-- Decorative dots -->
+          <circle cx="430" cy="60" r="4" fill="#39FF14" opacity=".7"/>
+          <circle cx="420" cy="60" r="4" fill="#39FF14" opacity=".3"/>
+          <circle cx="410" cy="60" r="4" fill="#39FF14" opacity=".15"/>
+        </svg>
+        <!-- Floating badges -->
+        <div class="absolute -top-4 -right-4 bg-[#111] border border-[#39FF1450] rounded-lg px-3 py-2 text-xs font-heading font-bold text-neon shadow-neon">
+          +300% ROI
+        </div>
+        <div class="absolute -bottom-2 -left-4 bg-[#111] border border-[#1e1e1e] rounded-lg px-3 py-2 text-xs font-body text-[#888]">
+          ⚡ Live Dashboard
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ TICKER ═══════════════════════════════ -->
+<div class="border-y border-[#1e1e1e] py-4 ticker-wrap overflow-hidden">
+  <div class="ticker-track">
+    <!-- First set -->
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Branding Strategy</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">SEO Optimization</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Paid Ads</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Content Marketing</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Conversion Rate</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Growth Hacking</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Analytics</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Performance Media</span>
+    <span class="text-neon">✦</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Branding Strategy</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">SEO Optimization</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Paid Ads</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Content Marketing</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Conversion Rate</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Growth Hacking</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Analytics</span>
+    <span class="text-neon">✦</span>
+    <span class="text-[#333] font-heading font-bold text-sm tracking-widest uppercase">Performance Media</span>
+    <span class="text-neon">✦</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ STATS ═══════════════════════════════ -->
+<section class="py-24 max-w-7xl mx-auto px-6">
+  <div class="text-center mb-16 reveal">
+    <p class="text-neon text-xs font-heading tracking-[.25em] uppercase mb-3">Our Impact</p>
+    <h2 class="font-heading font-extrabold text-white text-4xl md:text-5xl">In <span class="text-neon">Numbers</span></h2>
+  </div>
+
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-0 border border-[#1e1e1e] rounded-lg overflow-hidden">
+    <div class="stat-item reveal p-8 text-center border-r border-b lg:border-b-0 border-[#1e1e1e]" style="animation-delay:.05s">
+      <p class="font-heading font-extrabold text-5xl text-neon mb-2" data-target="10">10M+</p>
+      <p class="text-[#555] text-sm uppercase tracking-widest font-heading">Leads Generated</p>
+    </div>
+    <div class="stat-item reveal p-8 text-center border-b lg:border-b-0 lg:border-r border-[#1e1e1e]" style="animation-delay:.1s">
+      <p class="font-heading font-extrabold text-5xl text-white mb-2">500+</p>
+      <p class="text-[#555] text-sm uppercase tracking-widest font-heading">Happy Clients</p>
+    </div>
+    <div class="stat-item reveal p-8 text-center border-r border-[#1e1e1e]" style="animation-delay:.15s">
+      <p class="font-heading font-extrabold text-5xl text-neon mb-2">300%</p>
+      <p class="text-[#555] text-sm uppercase tracking-widest font-heading">Average ROI</p>
+    </div>
+    <div class="stat-item reveal p-8 text-center" style="animation-delay:.2s">
+      <p class="font-heading font-extrabold text-5xl text-white mb-2">200+</p>
+      <p class="text-[#555] text-sm uppercase tracking-widest font-heading">Campaigns Run</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ PRICING ═══════════════════════════════ -->
+<section id="pricing" class="py-24 max-w-7xl mx-auto px-6">
+  <div class="text-center mb-16 reveal">
+    <p class="text-neon text-xs font-heading tracking-[.25em] uppercase mb-3">Transparent Pricing</p>
+    <h2 class="font-heading font-extrabold text-white text-4xl md:text-5xl">Choose Your <span class="text-neon">Growth Plan</span></h2>
+    <p class="text-[#666] mt-4 max-w-lg mx-auto">No hidden fees. Cancel anytime. Start with the plan that fits your stage.</p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-6 items-stretch">
+
+    <!-- Starter -->
+    <div class="card-dark rounded-lg p-8 flex flex-col reveal" style="animation-delay:.05s">
+      <div class="mb-6">
+        <p class="text-[#555] text-xs uppercase tracking-widest font-heading mb-3">Starter</p>
+        <div class="flex items-end gap-1 mb-1">
+          <span class="font-heading font-extrabold text-white text-5xl">₹1.5k</span>
+          <span class="text-[#555] text-sm mb-2">/mo</span>
+        </div>
+        <p class="text-[#666] text-sm">Perfect for early-stage brands ready to establish their digital presence.</p>
+      </div>
+      <hr class="line-sep mb-6"/>
+      <ul class="space-y-3 flex-1 mb-8">
+        <li class="flex items-center gap-3 text-sm text-[#999]"><span class="text-neon">✓</span> Brand Identity Setup</li>
+        <li class="flex items-center gap-3 text-sm text-[#999]"><span class="text-neon">✓</span> Social Media Audit</li>
+        <li class="flex items-center gap-3 text-sm text-[#999]"><span class="text-neon">✓</span> 5 Content Pieces/Month</li>
+        <li class="flex items-center gap-3 text-sm text-[#555] line-through">Advanced Analytics</li>
+        <li class="flex items-center gap-3 text-sm text-[#555] line-through">Paid Ad Campaigns</li>
+      </ul>
+      <a href="#contact" class="btn-outline px-6 py-3 rounded-sm text-sm text-center block">Get Started</a>
+    </div>
+
+    <!-- Featured -->
+    <div class="card-featured rounded-lg p-8 flex flex-col reveal" style="animation-delay:.1s">
+      <div class="absolute top-0 right-6 -translate-y-1/2 bg-neon text-dark text-xs font-heading font-bold px-3 py-1 rounded-full">MOST POPULAR</div>
+      <div class="mb-6">
+        <p class="text-neon text-xs uppercase tracking-widest font-heading mb-3">Growth</p>
+        <div class="flex items-end gap-1 mb-1">
+          <span class="font-heading font-extrabold text-white text-5xl">₹3.5k</span>
+          <span class="text-[#555] text-sm mb-2">/mo</span>
+        </div>
+        <p class="text-[#888] text-sm">For scaling businesses that need a full-stack marketing engine.</p>
+      </div>
+      <hr class="border-[#39FF1430] mb-6"/>
+      <ul class="space-y-3 flex-1 mb-8">
+        <li class="flex items-center gap-3 text-sm text-white"><span class="text-neon">✓</span> Everything in Starter</li>
+        <li class="flex items-center gap-3 text-sm text-white"><span class="text-neon">✓</span> Full SEO Strategy</li>
+        <li class="flex items-center gap-3 text-sm text-white"><span class="text-neon">✓</span> Paid Ad Management</li>
+        <li class="flex items-center gap-3 text-sm text-white"><span class="text-neon">✓</span> Advanced Analytics</li>
+        <li class="flex items-center gap-3 text-sm text-white"><span class="text-neon">✓</span> 20 Content Pieces/Month</li>
+      </ul>
+      <a href="#contact" class="btn-neon px-6 py-3 rounded-sm text-sm text-center block">Get Started →</a>
+    </div>
+
+    <!-- Enterprise -->
+    <div class="card-dark rounded-lg p-8 flex flex-col reveal" style="animation-delay:.15s">
+      <div class="mb-6">
+        <p class="text-[#555] text-xs uppercase tracking-widest font-heading mb-3">Enterprise</p>
+        <div class="flex items-end gap-1 mb-1">
+          <span class="font-heading font-extrabold text-white text-5xl">Custom</span>
+        </div>
+        <p class="text-[#666] text-sm">Bespoke solutions for established brands demanding peak performance.</p>
+      </div>
+      <hr class="line-sep mb-6"/>
+      <ul class="space-y-3 flex-1 mb-8">
+        <li class="flex items-center gap-3 text-sm text-[#999]"><span class="text-neon">✓</span> Everything in Growth</li>
+        <li class="flex items-center gap-3 text-sm text-[#999]"><span class="text-neon">✓</span> Dedicated Account Manager</li>
+        <li class="flex items-center gap-3 text-sm text-[#999]"><span class="text-neon">✓</span> Custom Integrations</li>
+        <li class="flex items-center gap-3 text-sm text-[#999]"><span class="text-neon">✓</span> White-Label Reports</li>
+        <li class="flex items-center gap-3 text-sm text-[#999]"><span class="text-neon">✓</span> Priority 24/7 Support</li>
+      </ul>
+      <a href="#contact" class="btn-outline px-6 py-3 rounded-sm text-sm text-center block">Contact Sales</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ PROCESS ═══════════════════════════════ -->
+<section id="process" class="py-24 border-t border-[#1e1e1e]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      <!-- Left label -->
+      <div class="reveal-left lg:sticky top-32">
+        <p class="text-neon text-xs font-heading tracking-[.25em] uppercase mb-3">The Method</p>
+        <h2 class="font-heading font-extrabold text-white leading-tight mb-6" style="font-size:clamp(2.5rem,4vw,4rem)">How We <span class="text-neon">Scale</span><br>Your Business</h2>
+        <p class="text-[#666] leading-relaxed mb-8">Our battle-tested five-step process takes you from raw potential to measurable market dominance. No guesswork—just data-backed execution.</p>
+        <a href="#contact" class="btn-neon px-7 py-3 rounded-sm text-sm inline-block">Start the Process →</a>
+      </div>
+
+      <!-- Steps -->
+      <div class="space-y-0">
+        <!-- Step -->
+        <div class="flex gap-6 items-start py-10 border-b border-[#1e1e1e] reveal" style="animation-delay:.05s">
+          <div class="step-num">01</div>
+          <div class="pt-4">
+            <h3 class="font-heading font-bold text-white text-xl mb-2">Meet &amp; Strategy</h3>
+            <p class="text-[#666] leading-relaxed text-sm">We deep-dive into your brand, market position, and goals. No templates—a custom roadmap tailored to your unique competitive landscape.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start py-10 border-b border-[#1e1e1e] reveal" style="animation-delay:.1s">
+          <div class="step-num">02</div>
+          <div class="pt-4">
+            <h3 class="font-heading font-bold text-white text-xl mb-2">Campaign Launch</h3>
+            <p class="text-[#666] leading-relaxed text-sm">We deploy multi-channel campaigns across paid, organic, and social—engineered for maximum visibility and early conversions.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start py-10 border-b border-[#1e1e1e] reveal" style="animation-delay:.15s">
+          <div class="step-num">03</div>
+          <div class="pt-4">
+            <h3 class="font-heading font-bold text-white text-xl mb-2">Optimize &amp; Scale</h3>
+            <p class="text-[#666] leading-relaxed text-sm">Real-time A/B testing and data analysis to double down on what's working and eliminate waste—fast iteration, big results.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start py-10 border-b border-[#1e1e1e] reveal" style="animation-delay:.2s">
+          <div class="step-num">04</div>
+          <div class="pt-4">
+            <h3 class="font-heading font-bold text-white text-xl mb-2">Conversion Tracking</h3>
+            <p class="text-[#666] leading-relaxed text-sm">Full-funnel attribution setup so you know exactly which channels are generating revenue. Zero guessing, pure clarity.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start py-10 reveal" style="animation-delay:.25s">
+          <div class="step-num">05</div>
+          <div class="pt-4">
+            <h3 class="font-heading font-bold text-white text-xl mb-2">Long-Term Growth</h3>
+            <p class="text-[#666] leading-relaxed text-sm">We build compounding growth systems—SEO authority, brand equity, and loyal audiences that keep delivering returns long after campaigns end.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ TESTIMONIALS ═══════════════════════════════ -->
+<section class="py-24 border-t border-[#1e1e1e]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16 reveal">
+      <p class="text-neon text-xs font-heading tracking-[.25em] uppercase mb-3">Social Proof</p>
+      <h2 class="font-heading font-extrabold text-white text-4xl md:text-5xl">What Our <span class="text-neon">Partners</span> Say</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Test 1 -->
+      <div class="card-dark rounded-lg p-8 reveal" style="animation-delay:.05s">
+        <div class="flex gap-1 mb-4">
+          <span class="text-neon text-sm">★★★★★</span>
+        </div>
+        <p class="text-[#999] leading-relaxed text-sm mb-6">"Ascend transformed our entire digital presence. Within 90 days of launch, our qualified leads increased by 240% and our cost per acquisition dropped dramatically."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-neon/30 to-neon/5 border border-[#39FF1430] flex items-center justify-center font-heading font-bold text-neon text-sm">A</div>
+          <div>
+            <p class="font-heading font-semibold text-white text-sm">Arjun Mehta</p>
+            <p class="text-[#555] text-xs">CEO, VentureCore</p>
+          </div>
+        </div>
+      </div>
+      <!-- Test 2 -->
+      <div class="card-dark rounded-lg p-8 reveal" style="animation-delay:.1s">
+        <div class="flex gap-1 mb-4">
+          <span class="text-neon text-sm">★★★★★</span>
+        </div>
+        <p class="text-[#999] leading-relaxed text-sm mb-6">"The team's data-driven approach is unmatched. They set up attribution models we'd never thought of and helped us reallocate budget for a 3x return. Absolute game changers."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-neon/30 to-neon/5 border border-[#39FF1430] flex items-center justify-center font-heading font-bold text-neon text-sm">S</div>
+          <div>
+            <p class="font-heading font-semibold text-white text-sm">Sofia Reyes</p>
+            <p class="text-[#555] text-xs">CMO, Elevate Labs</p>
+          </div>
+        </div>
+      </div>
+      <!-- Test 3 -->
+      <div class="card-dark rounded-lg p-8 reveal" style="animation-delay:.15s">
+        <div class="flex gap-1 mb-4">
+          <span class="text-neon text-sm">★★★★★</span>
+        </div>
+        <p class="text-[#999] leading-relaxed text-sm mb-6">"We've worked with five agencies before Ascend. None came close to this level of transparency, execution speed, and measurable outcomes. Truly partners in growth."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-neon/30 to-neon/5 border border-[#39FF1430] flex items-center justify-center font-heading font-bold text-neon text-sm">K</div>
+          <div>
+            <p class="font-heading font-semibold text-white text-sm">Kenji Tanaka</p>
+            <p class="text-[#555] text-xs">Founder, Nexus Digital</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ BLOG ═══════════════════════════════ -->
+<section id="blog" class="py-24 border-t border-[#1e1e1e]">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-wrap items-end justify-between gap-4 mb-16">
+      <div class="reveal">
+        <p class="text-neon text-xs font-heading tracking-[.25em] uppercase mb-3">Resources</p>
+        <h2 class="font-heading font-extrabold text-white text-4xl md:text-5xl">Latest from<br>the <span class="text-neon">Blog</span></h2>
+      </div>
+      <a href="#" class="btn-outline px-5 py-2.5 rounded-sm text-sm reveal">View All Posts →</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="card-dark rounded-lg overflow-hidden reveal" style="animation-delay:.05s">
+        <div class="blog-img h-48 flex items-center justify-center">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="29" stroke="#39FF1420" stroke-width="1"/><path d="M20 40 Q30 15 40 40" stroke="#39FF14" stroke-width="1.5" fill="none"/><circle cx="30" cy="28" r="5" stroke="#39FF1450" stroke-width="1" fill="none"/></svg>
+        </div>
+        <div class="p-6">
+          <span class="text-neon text-xs font-heading tracking-wider uppercase">Strategy</span>
+          <h3 class="font-heading font-bold text-white text-lg mt-2 mb-3 leading-snug">The Ultimate Guide to B2B SEO in 2025</h3>
+          <p class="text-[#666] text-sm leading-relaxed mb-4">How high-intent keywords and topical authority are reshaping B2B lead generation in today's market.</p>
+          <div class="flex items-center justify-between border-t border-[#1e1e1e] pt-4">
+            <span class="text-[#555] text-xs">Nov 12, 2025</span>
+            <a href="#" class="text-neon text-xs font-heading font-semibold hover:underline">Read More →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card-dark rounded-lg overflow-hidden reveal" style="animation-delay:.1s">
+        <div class="blog-img h-48 flex items-center justify-center">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><rect x="15" y="15" width="30" height="30" rx="2" stroke="#39FF1430" stroke-width="1"/><rect x="20" y="22" width="20" height="2" rx="1" fill="#39FF1460"/><rect x="20" y="28" width="14" height="2" rx="1" fill="#39FF1430"/><rect x="20" y="34" width="18" height="2" rx="1" fill="#39FF1420"/></svg>
+        </div>
+        <div class="p-6">
+          <span class="text-neon text-xs font-heading tracking-wider uppercase">Paid Media</span>
+          <h3 class="font-heading font-bold text-white text-lg mt-2 mb-3 leading-snug">How to Make Your Meta Ads Actually Convert</h3>
+          <p class="text-[#666] text-sm leading-relaxed mb-4">Advanced audience segmentation and creative frameworks that cut CPL in half without sacrificing scale.</p>
+          <div class="flex items-center justify-between border-t border-[#1e1e1e] pt-4">
+            <span class="text-[#555] text-xs">Oct 28, 2025</span>
+            <a href="#" class="text-neon text-xs font-heading font-semibold hover:underline">Read More →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card-dark rounded-lg overflow-hidden reveal" style="animation-delay:.15s">
+        <div class="blog-img h-48 flex items-center justify-center">
+          <svg width="60" height="60" viewBox="0 0 60 60" fill="none"><polyline points="10,45 22,28 32,35 42,18 50,25" stroke="#39FF14" stroke-width="1.5" fill="none" stroke-linejoin="round"/><circle cx="42" cy="18" r="3" fill="#39FF14" opacity=".6"/></svg>
+        </div>
+        <div class="p-6">
+          <span class="text-neon text-xs font-heading tracking-wider uppercase">Growth</span>
+          <h3 class="font-heading font-bold text-white text-lg mt-2 mb-3 leading-snug">5 New Heavy Trends That Will Define Marketing</h3>
+          <p class="text-[#666] text-sm leading-relaxed mb-4">From AI-personalization to zero-click content, the forces reshaping how brands capture attention in 2026.</p>
+          <div class="flex items-center justify-between border-t border-[#1e1e1e] pt-4">
+            <span class="text-[#555] text-xs">Oct 10, 2025</span>
+            <a href="#" class="text-neon text-xs font-heading font-semibold hover:underline">Read More →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ CTA BAND ═══════════════════════════════ -->
+<section class="py-24 border-t border-[#1e1e1e] relative overflow-hidden">
+  <div class="absolute inset-0 opacity-5" style="background: radial-gradient(ellipse 80% 60% at 50% 50%, #39FF14, transparent);"></div>
+  <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+    <p class="text-neon text-xs font-heading tracking-[.25em] uppercase mb-4 reveal">Let's Build Together</p>
+    <h2 class="font-heading font-extrabold text-white mb-6 reveal" style="font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.05;animation-delay:.05s">Ready to Scale<br>Your Business?</h2>
+    <p class="text-[#666] text-lg mb-10 max-w-xl mx-auto reveal" style="animation-delay:.1s;">Stop leaving revenue on the table. Join 500+ brands already growing with Ascend.</p>
+    <div class="flex flex-wrap gap-4 justify-center reveal" style="animation-delay:.15s;">
+      <a href="#contact" class="btn-neon px-10 py-4 rounded-sm text-base inline-block">Get Free Strategy Call →</a>
+      <a href="#pricing" class="btn-outline px-10 py-4 rounded-sm text-base inline-block">View Plans</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+<section id="contact" class="py-24 border-t border-[#1e1e1e]">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
+    <!-- Left -->
+    <div class="reveal-left">
+      <p class="text-neon text-xs font-heading tracking-[.25em] uppercase mb-4">Get in Touch</p>
+      <h2 class="font-heading font-extrabold text-white mb-6 leading-tight" style="font-size:clamp(2.5rem,4vw,3.5rem)">Let's Grow<br>Your Brand</h2>
+      <p class="text-[#666] leading-relaxed mb-10">Fill out the form and our strategy team will reach out within 24 hours with a customized growth plan for your business.</p>
+
+      <div class="space-y-6">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-sm border border-[#1e1e1e] flex items-center justify-center flex-shrink-0 text-neon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h12v12H3z" rx="2"/><path d="M3 6l6 4 6-4"/></svg>
+          </div>
+          <div>
+            <p class="font-heading font-semibold text-white text-sm">Email Us</p>
+            <p class="text-[#666] text-sm mt-0.5"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="563e333a3a391637253533383237313338352f783f39">[email&#160;protected]</a></p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-sm border border-[#1e1e1e] flex items-center justify-center flex-shrink-0 text-neon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3l3 1-1 3 2 2 3-1 1 3-2 1a11 11 0 01-8-8l1-2z"/></svg>
+          </div>
+          <div>
+            <p class="font-heading font-semibold text-white text-sm">Call Us</p>
+            <p class="text-[#666] text-sm mt-0.5">+91 98765 43210</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-sm border border-[#1e1e1e] flex items-center justify-center flex-shrink-0 text-neon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="8" r="3"/><path d="M9 1C5.7 1 3 3.7 3 7c0 4.5 6 10 6 10s6-5.5 6-10c0-3.3-2.7-6-6-6z"/></svg>
+          </div>
+          <div>
+            <p class="font-heading font-semibold text-white text-sm">Headquarters</p>
+            <p class="text-[#666] text-sm mt-0.5">Mumbai, India · Remote Worldwide</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="card-dark rounded-lg p-8 reveal-right">
+      <div id="form-success" class="hidden flex flex-col items-center justify-center py-12 text-center">
+        <div class="w-16 h-16 rounded-full border-2 border-neon flex items-center justify-center mb-4 text-neon text-3xl shadow-neon">✓</div>
+        <h3 class="font-heading font-bold text-white text-xl mb-2">Message Sent!</h3>
+        <p class="text-[#666] text-sm">We'll get back to you within 24 hours.</p>
+      </div>
+
+      <form id="contact-form" class="space-y-5" novalidate>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-heading text-[#555] uppercase tracking-wider mb-2">First Name</label>
+            <input type="text" placeholder="John" class="input-glow w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-sm px-4 py-3 text-white text-sm placeholder-[#333] transition-all"/>
+          </div>
+          <div>
+            <label class="block text-xs font-heading text-[#555] uppercase tracking-wider mb-2">Last Name</label>
+            <input type="text" placeholder="Doe" class="input-glow w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-sm px-4 py-3 text-white text-sm placeholder-[#333] transition-all"/>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-heading text-[#555] uppercase tracking-wider mb-2">Email Address</label>
+          <input type="email" placeholder="john@company.com" class="input-glow w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-sm px-4 py-3 text-white text-sm placeholder-[#333] transition-all"/>
+        </div>
+        <div>
+          <label class="block text-xs font-heading text-[#555] uppercase tracking-wider mb-2">Company</label>
+          <input type="text" placeholder="Your Company Inc." class="input-glow w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-sm px-4 py-3 text-white text-sm placeholder-[#333] transition-all"/>
+        </div>
+        <div>
+          <label class="block text-xs font-heading text-[#555] uppercase tracking-wider mb-2">Monthly Budget</label>
+          <select class="input-glow w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-sm px-4 py-3 text-[#999] text-sm transition-all appearance-none">
+            <option value="" disabled selected>Select a range</option>
+            <option>Under ₹1,000 / month</option>
+            <option>₹1,000 – ₹3,000 / month</option>
+            <option>₹3,000 – ₹7,500 / month</option>
+            <option>₹7,500+ / month</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-xs font-heading text-[#555] uppercase tracking-wider mb-2">Tell Us About Your Goals</label>
+          <textarea rows="4" placeholder="We want to increase qualified leads by 200% in Q1..." class="input-glow w-full bg-[#0a0a0a] border border-[#1e1e1e] rounded-sm px-4 py-3 text-white text-sm placeholder-[#333] transition-all resize-none"></textarea>
+        </div>
+        <button type="submit" class="btn-neon w-full py-4 rounded-sm text-sm font-heading font-bold tracking-wider uppercase">
+          Send Message — Get Free Strategy →
+        </button>
+        <p class="text-[#444] text-xs text-center">No spam. No commitment. Response within 24 hours.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer class="border-t border-[#1e1e1e] relative overflow-hidden">
+  <!-- Background text -->
+  <div class="absolute bottom-0 left-0 right-0 flex justify-center items-end pointer-events-none select-none overflow-hidden pb-0 opacity-100">
+    <div class="footer-bg-text" style="-webkit-text-stroke: 1px #161616; color:transparent">GROWTH</div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 pt-20 pb-10 relative z-10">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <a href="#" class="flex items-center gap-2 mb-4">
+          <div class="w-8 h-8 bg-neon rounded-sm flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="#0a0a0a"><path d="M2 14 L8 2 L14 14 L10 14 L8 8 L6 14 Z"/></svg>
+          </div>
+          <span class="font-heading font-bold text-white text-lg">Ascend<span class="text-neon">.</span></span>
+        </a>
+        <p class="text-[#555] text-sm leading-relaxed mb-6">Performance-driven marketing systems designed to scale brands faster.</p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 border border-[#1e1e1e] rounded-sm flex items-center justify-center text-[#555] hover:text-neon hover:border-[#39FF1440] transition-all text-sm">𝕏</a>
+          <a href="#" class="w-9 h-9 border border-[#1e1e1e] rounded-sm flex items-center justify-center text-[#555] hover:text-neon hover:border-[#39FF1440] transition-all text-sm">in</a>
+          <a href="#" class="w-9 h-9 border border-[#1e1e1e] rounded-sm flex items-center justify-center text-[#555] hover:text-neon hover:border-[#39FF1440] transition-all text-sm">ig</a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <p class="font-heading font-bold text-white text-sm uppercase tracking-widest mb-5">Services</p>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-[#555] text-sm hover:text-neon transition-colors">Brand Strategy</a></li>
+          <li><a href="#" class="text-[#555] text-sm hover:text-neon transition-colors">SEO & Content</a></li>
+          <li><a href="#" class="text-[#555] text-sm hover:text-neon transition-colors">Paid Media</a></li>
+          <li><a href="#" class="text-[#555] text-sm hover:text-neon transition-colors">Analytics</a></li>
+          <li><a href="#" class="text-[#555] text-sm hover:text-neon transition-colors">CRO</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <p class="font-heading font-bold text-white text-sm uppercase tracking-widest mb-5">Company</p>
+        <ul class="space-y-3">
+          <li><a href="#about" class="text-[#555] text-sm hover:text-neon transition-colors">About Us</a></li>
+          <li><a href="#blog" class="text-[#555] text-sm hover:text-neon transition-colors">Blog</a></li>
+          <li><a href="#" class="text-[#555] text-sm hover:text-neon transition-colors">Careers</a></li>
+          <li><a href="#" class="text-[#555] text-sm hover:text-neon transition-colors">Privacy Policy</a></li>
+          <li><a href="#" class="text-[#555] text-sm hover:text-neon transition-colors">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Let's Grow -->
+      <div>
+        <p class="font-heading font-bold text-white text-sm uppercase tracking-widest mb-5">Let's Grow Your Brand</p>
+        <p class="text-[#555] text-sm leading-relaxed mb-5">Subscribe for weekly marketing insights from our team.</p>
+        <div class="flex gap-0">
+          <input type="email" placeholder="your@email.com" class="input-glow flex-1 bg-[#0a0a0a] border border-[#1e1e1e] rounded-sm rounded-r-none px-3 py-2.5 text-white text-sm placeholder-[#333] transition-all"/>
+          <button class="btn-neon px-4 py-2.5 rounded-sm rounded-l-none text-sm font-heading font-bold">→</button>
+        </div>
+      </div>
+    </div>
+
+    <hr class="line-sep mb-8"/>
+
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <p class="text-[#444] text-xs">© 2025 Ascend Agency. All rights reserved.</p>
+      <p class="text-[#444] text-xs">Built with ❤️ for high-growth brands</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
